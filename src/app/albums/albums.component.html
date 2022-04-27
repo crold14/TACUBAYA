@@ -1,0 +1,14 @@
+<div class="albums">
+    <h1>ALBUMS</h1>
+
+
+    <input class="form-control me-2" type="search" placeholder="Search" id="filtraTexto" aria-label="Search" (input)="onInput($event)">
+    <h5>Click to see the pictures</h5>
+
+    <div class="album" *ngFor="let album of arrAlbums" [routerLink]="['/albums/', album.id]" routerLinkActive="activo">
+        <ul class="list-group ">
+            <li class="list-group-item"> {{album.id}}: {{album.title}}</li>
+        </ul>
+
+    </div>
+</div>
